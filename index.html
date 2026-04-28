@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stan clicker</title>
+    <link rel="icon" type="image/x-icon" href="./image.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+
+        #yeh {
+            width: 25%;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .main {
+            margin-top: 3vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>stan clicker</h1>
+            <img id="yeh" src="./image.png">
+        </div>
+        <div class="main">
+            <button id="clicky">click meh</button>
+            <h3 id="clickyText">times clicked: 0</h3>
+        </div>
+    </div>
+    <script>
+        let timesClicked = 0;
+        const clickText = document.getElementById("clickyText");
+        document.getElementById("clicky").onclick = function() {
+            timesClicked = timesClicked + 1;
+            clickText.textContent = "times clicked: " + timesClicked;
+        };
+    </script>
+</body>
+</html>
